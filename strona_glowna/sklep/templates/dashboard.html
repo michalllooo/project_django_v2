@@ -1,0 +1,126 @@
+
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" href="../static/css/glowna.css">
+<body>
+    <header>
+        <div class="user-info">
+            {% if user.is_authenticated %}
+                <span>Welcome, {{ user.username }}!</span>
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form>
+            {% endif %}
+        </div>
+    </header>
+<div class="container">
+    <h1>Województwa Polski</h1><br>
+    <div class="wojewodztwa-list">
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'zach' %}">
+                <img src="{% static 'images/zachod.png' %}" alt="zachodnioporskie">
+                <p>zachodnioporskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'pomo' %}">
+                <img src="{% static 'images/pomorskie.jpeg' %}" alt="pomorskie">
+                <p>pomorskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'warm' %}">
+                <img src="{% static 'images/warm.jpeg' %}" alt="warminsko-mazurskie">
+                <p>warminsko-mazurskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'podl' %}">
+                <img src="{% static 'images/podl.jpeg' %}" alt="podlaskie">
+                <p>podlaskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'mazo' %}">
+                <img src="{% static 'images/mazow.jpeg' %}" alt="mazowieckie">
+                <p>mazowieckie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'kuja' %}">
+                <img src="{% static 'images/kujaw.jpeg' %}" alt="Kujawsko-Pomorskie">
+                <p>Kujawsko-Pomorskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'wiel' %}">
+                <img src="{% static 'images/wiel.jpeg' %}" alt="wielkopolskie">
+                <p>wielkopolskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'lubu' %}">
+                <img src="{% static 'images/lubus.png' %}" alt="lubuskie">
+                <p>lubuskie</p>
+            </a>
+        </div>
+
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'doln' %}">
+                <img src="{% static 'images/dolnoslaskie.png' %}" alt="Dolnośląskie">
+                <p>Dolnośląskie</p>
+            </a>
+        </div>
+       
+      
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'opol' %}">
+                <img src="{% static 'images/opol.jpeg' %}" alt="opolskie">
+                <p>opolskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'lodz' %}">
+                <img src="{% static 'images/lodz.jpeg' %}" alt="lodzie">
+                <p>lodzkie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'swie' %}">
+                <img src="{% static 'images/swiet.jpeg' %}" alt="swietokrzyskie">
+                <p>swietokrzyskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'lube' %}">
+                <img src="{% static 'images/lubel.jpeg' %}" alt="lubelskie">
+                <p>lubelskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'podk' %}">
+                <img src="{% static 'images/podka.jpeg' %}" alt="podkarpackie">
+                <p>podkarpackie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'malo' %}">
+                <img src="{% static 'images/malop.jpeg' %}" alt="malopolskie">
+                <p>malopolskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'slas' %}">
+                <img src="{% static 'images/slask.jpeg' %}" alt="slaskie">
+                <p>slaskie</p>
+            </a>
+        </div>
+       
+      
+    </div>
+</div>
+</body>
+{% endblock %}
