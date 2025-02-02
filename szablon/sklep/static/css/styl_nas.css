@@ -1,0 +1,60 @@
+
+/*kolory dobierał czat*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0; 
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #b71c1c; 
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 20px auto; 
+    padding: 10px; 
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.accordion-item {
+    border: 1px solid #b71c1c; 
+    margin-bottom: 20px;
+    border-radius: 5px; 
+    overflow: hidden;
+}
+
+.accordion-title {
+    background-color: #b71c1c; 
+    color: #ffffff; 
+    cursor: pointer;
+    padding: 15px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-title:hover {
+    background-color: #9a0007; 
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: #ffffff; 
+    font-size: 16px;
+    line-height: 1.5;
+    border-top: 1px solid #b71c1c; 
+}
+
+.accordion-content p {
+    margin: 0;
+    color: #333; 
+}
