@@ -1,0 +1,89 @@
+
+{% block content %}
+<link rel="stylesheet" href="../../static/css/wojw.css">
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Pomorskie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Gdańsk</p>
+                <img src="../../static/images/miasta/gdan.jpeg" alt="Szczecin">
+            </div>
+            <div class="city">
+                <p>Bazylika mariacka</p>
+                Jest największym ceglanym kościołem na świecie, którego budowa trwała prawie 160 lat. Wnętrze zachwyca gotycką architekturą i słynnym zegarem astronomicznym. Można także wejść na wieżę bazyliki i podziwiać panoramę Gdańska.
+              <br><br>  <img src="../../static/images/miejsca/mari.jpeg" alt="City 2">
+            </div>
+            <div class="city">
+                <p>Targ i Neptun</p>
+                To najbardziej reprezentacyjna ulica Gdańska, otoczona kolorowymi kamienicami i zabytkowymi budynkami. Fontanna Neptuna to jeden z symboli miasta, nawiązujący do jego morskiego charakteru. Miejsce tętni życiem zarówno w dzień, jak i wieczorem, a wokół znajdują się liczne restauracje i kawiarnie.
+                <br><br>   <img src="../../static/images/miejsca/targ.jpeg" alt="City 3">
+            </div>
+            <div class="city">
+                <p>Muzem II WŚ</p>
+                To jedno z najnowocześniejszych muzeów w Polsce, które przedstawia wydarzenia wojenne z perspektywy różnych narodów. Ekspozycja zawiera autentyczne eksponaty, multimedialne prezentacje i realistyczne rekonstrukcje. Wizyta tutaj to przejmujące doświadczenie, które pozwala lepiej zrozumieć skalę konfliktu.
+                <br><br>   <img src="../../static/images/miejsca/muze.jpeg" alt="City 4">
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Sopot</p>
+              
+               <img src="../../static/images/miasta/sopo.jpeg" alt="kolobrzeg">
+            </div>
+            <div class="city">
+                <p>Monte Cassino ("Monciak")</p>
+                Jest to główny deptak Sopotu, pełen eleganckich kawiarni, restauracji i klubów. To miejsce tętni życiem przez cały rok i przyciąga zarówno turystów, jak i mieszkańców. Wzdłuż ulicy można zobaczyć m.in. Krzywy Domek, który swoim bajkowym wyglądem przyciąga uwagę każdego przechodnia.
+               
+                <br><br>  <img src="../../static/images/miejsca/mont.jpeg" alt="City 2">
+            </div>
+            <div class="city">
+                <p>Molo</p>
+                To najdłuższe drewniane molo w Europie, sięgające aż 511 metrów w głąb morza. Spacer po nim pozwala poczuć morski klimat i podziwiać piękne widoki na Zatokę Gdańską. Latem odbywają się tu liczne wydarzenia kulturalne, a zimą można poczuć wyjątkową, spokojną atmosferę.
+                <br><br>  <img src="../../static/images/miejsca/molos.jpeg" alt="City 3">
+            </div>
+            <div class="city">
+                <p>Opera leśna</p>
+                To niezwykły amfiteatr położony w lesie, znany z doskonałej akustyki i prestiżowych wydarzeń muzycznych. Odbywa się tu m.in. słynny Sopot Festival, przyciągający artystów z całego świata. Otaczające drzewa sprawiają, że koncerty w tym miejscu mają niepowtarzalny klimat.
+                <br><br>  <img src="../../static/images/miejsca/oper.jpeg" alt="City 4">
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Hel</p>
+            
+           <img src="../../static/images/miasta/hel.jpeg" alt="Świnoujście">
+            </div>
+            <div class="city">
+                <p>Fokarium</p>
+                To ośrodek naukowy zajmujący się ochroną fok szarych, które można tu zobaczyć z bliska. Zwiedzający mogą obserwować karmienie fok oraz dowiedzieć się więcej o ich biologii i ochronie. To jedno z najbardziej popularnych miejsc na Helu, zwłaszcza dla rodzin z dziećmi.
+                <br><br> <img src="../../static/images/miejsca/foka.jpeg" alt="City 2">
+            </div>
+            <div class="city">
+                <p>Cypel</p>
+                Jest to najbardziej wysunięty na północny wschód punkt Półwyspu Helskiego, gdzie Bałtyk spotyka się z Zatoką Pucką. Można tu spacerować wśród wydm i podziwiać malownicze krajobrazy. To także doskonałe miejsce do obserwacji ptaków oraz relaksu z dala od miejskiego zgiełku.
+                <br><br>  <img src="../../static/images/miejsca/cype.jpeg" alt="City 3">
+            </div>
+            <div class="city">
+                <p>Muzeum Obrony Wybrzeża</p>
+                Znajduje się w dawnych niemieckich bunkrach i przedstawia historię wojskowości na Półwyspie Helskim. Można tu zobaczyć oryginalne działa, mundury i dokumenty związane z obroną Helu podczas II wojny światowej. Zwiedzanie muzeum pozwala lepiej zrozumieć strategiczne znaczenie tego miejsca na mapie Polski.
+                <br><br> <img src="../../static/images/miejsca/muzeh.jpeg" alt="City 4">
+            </div>
+        </div>
+    </div>
+</article>
+</body>
+{% endblock %}

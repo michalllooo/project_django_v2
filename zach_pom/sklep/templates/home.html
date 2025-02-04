@@ -1,0 +1,19 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+
+{% block content %}
+<header>
+    <h1>Witamy w przewodniku po polsce</h1>
+</header>
+<main>
+    <div class="home-images">
+        <img src="{% static 'images/pobrane.jpg' %}" alt="Placeholder Image 1">
+        <div class="login-register">
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'register' %}">Register</a>
+            <a href="{% url 'o_nas' %}">O nas</a>
+        </div>
+        <img src="{% static 'images/swiat.jpg' %}" alt="Placeholder Image 2">
+    </div>
+</main>
+{% endblock %}
