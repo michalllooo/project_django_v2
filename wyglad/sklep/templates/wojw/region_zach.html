@@ -1,0 +1,101 @@
+{% block content %}
+<link rel="stylesheet" href="../../static/css/wojw.css">
+<script src="../../static/js/votes.js"></script>
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Zachodnioporskie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Szczecin</p>
+                Szczecin (niem. Stettinⓘ) – miasto na prawach powiatu w północno-zachodniej Polsce, stolica i największe miasto województwa zachodniopomorskiego, położone na Pobrzeżu Szczecińskim, nad Odrą i jeziorem Dąbie. Szczecin jest uznawany za historyczną stolicę Pomorza Zachodniego[8] i księstwa pomorskiego; później w granicach Szwecji, Brandenburgii, Prus i Niemiec. 
+                <img src="../../static/images/miasta/szcz.jpeg" alt="Szczecin">
+               
+            </div>
+            <div class="city">
+                <p>Jezioro Dąbie</p>
+                Dąbie (do 1945 niem. Dammscher See) – jezioro deltowe w Dolinie Dolnej Odry, w województwie zachodniopomorskim, w całości w granicach Szczecina, osiedla Dąbie. Powierzchnia lustra wody obejmuje 54,08 km²[1], co stanowi 4. miejsce w Polsce i 1. w województwie. 
+                <br><br>  <img src="../../static/images/miejsca/dabs.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Jasne Błonia</p>
+                Plac Jasne Błonia im. Jana Pawła II – szeroki zieleniec, znajdujący się na północ od gmachu szczecińskiego Urzędu Miejskiego, ograniczony ulicami Michała Ogińskiego, Karola Szymanowskiego i Stanisława Moniuszki. Od północnego zachodu przechodzi w Park Kasprowicza.
+                <br><br>   <img src="../../static/images/miejsca/jasn.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Wały Chrobrego</p>
+                Wały Chrobrego (pierwotnie niem. Hakenterrasse, w znaczeniu dosłownym: Taras Hakena) – taras widokowy o długości ok. 500 m w Szczecinie na skarpie wzdłuż Odry. 
+                <br><br>   <img src="../../static/images/miejsca/waly.jpeg" alt="City 4">
+              
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Kołobrzeg</p>
+                Kołobrzeg (niem. Kolberg) – miasto w północnej części województwa zachodniopomorskiego, w powiecie kołobrzeskim, u ujścia Parsęty do Morza Bałtyckiego, przy drodze krajowej nr 11 i drodze ekspresowej nr S6. 
+                <img src="../../static/images/miasta/kolo.jpeg" alt="kolobrzeg">
+               
+            </div>
+            <div class="city">
+                <p>Molo</p>
+                Molo w Kołobrzegu – żelbetowe molo w Polsce, w Dzielnicy Uzdrowiskowej Kołobrzegu. Zlokalizowane jest na przedłużeniu ulicy Mickiewicza, przy sanatorium Bałtyk i bulwarze Jana Szymańskiego, w pobliżu Parku im. Stefana Żeromskiego (zdrojowego).
+                <br><br>  <img src="../../static/images/miejsca/molo.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Bazylika</p>
+                Bazylika konkatedralna Wniebowzięcia Najświętszej Maryi Panny w Kołobrzegu – kościół farny w Kołobrzegu. Świątynia rzymskokatolicka wybudowana w XIV wieku w stylu gotyckim, halowa, pięcionawowa. Od 1972 konkatedra diecezji koszalińsko-kołobrzeskiej.
+                <br><br>  <img src="../../static/images/miejsca/bazy.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Latarnia</p>
+                Latarnia Morska Kołobrzeg – latarnia morska na polskim wybrzeżu Bałtyku, nad Zatoką Pomorską położona w mieście Kołobrzeg, w województwie zachodniopomorskim[2].
+                <br><br>  <img src="../../static/images/miejsca/lata.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Świnoujście</p>
+                Świnoujście (niem. Swinemünde[4]) – miasto na prawach powiatu, uzdrowisko w północno-zachodnim krańcu Polski, najdalej wysunięte na północny zachód miasto w kraju, w województwie zachodniopomorskim z portem morskim i kąpieliskiem, położone nad cieśniną Świną oraz nad Morzem Bałtyckim, 
+                <img src="../../static/images/miasta/swin.jpeg" alt="Świnoujście">
+               
+            </div>
+            <div class="city">
+                <p>Fort Gerharda</p>
+                doskonale zachowane pruskie fortyfikacje. Można tu przeżyć historyczną przygodę i poczuć klimat dawnych czasów.doskonale zachowane pruskie fortyfikacje. Można tu przeżyć historyczną przygodę i poczuć klimat dawnych czasów.
+                <br><br> <img src="../../static/images/miejsca/fort.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Plaża i promenada</p>
+                Świnoujście słynie z jednej z najpiękniejszych plaż w Polsce. Szeroka, piaszczysta, z łagodnym wejściem do morza, idealna na spacery i relaks. Promenada pełna kawiarni i restauracji dodaje uroku.
+                <br><br>  <img src="../../static/images/miejsca/plaz.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Stawa Młyny</p>
+                charakterystyczny biały wiatrak na końcu falochronu, symbol miasta. Świetne miejsce na spacer i zdjęcia, zwłaszcza o zachodzie słońca. 🌅 Świetne miejsce na spacer i zdjęcia, zwłaszcza o zachodzie słońca. 🌅
+                <br><br> <img src="../../static/images/miejsca/staw.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+    </div>
+</article>
+</body>
+{% endblock %}

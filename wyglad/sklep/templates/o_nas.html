@@ -1,0 +1,74 @@
+{% load static %}
+
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styl_nas.css' %}">
+</head>
+<body>
+    <h1>Najlepszy przewodnik po Polsce</h1>
+    <div class="accordion">
+        <div class="accordion-item">
+            <h3 class="accordion-title">Co zyskasz dzieki naszej stronie ?</h3>
+            <div class="accordion-content">
+                <p>Dzięki naszemu przewodnikowi po Polsce jesteś w stanie dowiedzieć się jakie miasta w Polsce są warte odwiedzenia oraz jakich punktów w tych miastach nie możesz opuścić.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h3 class="accordion-title">Dlaczego warto odwiedzać akurat Polskie miasta ? ( z perspektywy Polaka )</h3>
+            <div class="accordion-content">
+                <p><h4>Z perspektywy Polaka</h4>
+                    Polskie miasta to prawdziwe perełki, które warto odwiedzać zarówno ze względu na ich bogatą historię, jak i dynamiczny rozwój. Każde z nich ma swój unikalny charakter – od królewskiego Krakowa, przez tętniącą życiem Warszawę, aż po pełen tajemniczych zaułków Gdańsk. Polska to kraj pełen kontrastów, gdzie gotyckie katedry stoją obok nowoczesnych biurowców, a tradycyjna kuchnia przeplata się z nowoczesnymi trendami kulinarnymi. Dodatkowo, podróżowanie po Polsce jest stosunkowo tanie w porównaniu do Europy Zachodniej, co sprawia, że możemy odkrywać swoje dziedzictwo bez nadwyrężania budżetu.
+                    
+                    Nie można też zapominać o wyjątkowej atmosferze polskich miast – gościnność mieszkańców, liczne festiwale i wydarzenia kulturalne sprawiają, że życie w nich tętni energią. Każdy Polak powinien choć raz odwiedzić Wrocław, by zachwycić się jego mostami i krasnalami, czy Lublin, by poczuć ducha dawnej Rzeczypospolitej. To nasza historia, kultura i tradycja – warto je poznawać!</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h3 class="accordion-title">Why is it worth visiting a Polish city? Foreigner’s Perspective</h3>
+            <div class="accordion-content">
+                <p><h4>From a Foreigner’s Perspective</h4>
+                    Poland is one of the most underrated destinations in Europe, hiding true gems waiting to be discovered! From the majestic Kraków, where you can get lost in medieval streets, to the modern and dynamic Warsaw, seamlessly blending history with contemporary life. Poland impresses not only with its stunning architecture but also with its affordable prices, delicious cuisine, and the warmth of its people.
+
+                    Each city has something unique to offer – Gdańsk enchants with its maritime atmosphere and fascinating history, Wrocław captivates with its magical old town, and Poznań delights with its colorful townhouses and charming mechanical goats. Moreover, Poland is a paradise for nature lovers – within just a few hours, you can travel from a bustling city to the picturesque Masurian lakes or the breathtaking Tatra Mountains. It’s the perfect destination for those seeking both adventure and relaxation!
+                    
+                    Have you visited Poland yet? If not, it’s time to discover this incredible country! 🇵🇱✨</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h3 class="accordion-title">Nasz ranking top20 polskich miast</h3>
+            <div class="accordion-content">
+                <p> 1. Szczecin – Zielone miasto z piękną architekturą i portowym klimatem.
+                   <br> 2. Kraków – Królewskie miasto pełne zabytków, z urokliwym Starym Miastem, Wawelem i klimatycznym Kazimierzem.
+                    <br>3. Gdańsk – Perła Bałtyku z piękną starówką, malowniczymi kamienicami i nadmorskim klimatem.
+                    <br>4. Wrocław – Miasto stu mostów, uroczych krasnali i magicznej atmosfery Ostrowa Tumskiego.
+                    <br>5. Warszawa – Stolica pełna kontrastów, gdzie historia spotyka się z nowoczesnością.
+                    <br>  6. Toruń – Gotyckie miasto Kopernika z przepiękną starówką wpisaną na listę UNESCO.
+                    <br>  7. Poznań – Kolorowe kamienice, słynne koziołki i dynamiczna atmosfera.
+                    <br>  8. Zamość – Renesansowa perła Polski z idealnym układem urbanistycznym.
+                    <br>  9. Lublin – Magiczne miasto z piękną starówką i wyjątkowym klimatem wschodniej Polski.
+                    <br>  10. Sandomierz – Urocze miasteczko z malowniczym położeniem i bogatą historią.
+                    <br>  11. Kazimierz Dolny – Artystyczne miasto nad Wisłą, idealne na romantyczne spacery.
+                    <br> 12. Łódź – Miasto murali, industrialnej architektury i unikalnej ulicy Piotrkowskiej.
+                   
+                    <br> 13. Bydgoszcz – Wenecja Północy z malowniczymi spichlerzami nad Brdą.
+                    <br>  14. Malbork – Dom największego zamku krzyżackiego na świecie.
+                    <br>  15. Przemyśl – Urocze miasto na wzgórzach z piękną architekturą i bliskością Bieszczad.
+                    <br>   16. Gdynia – Nowoczesne, nadmorskie miasto z pięknymi plażami i modernistyczną architekturą.
+                    <br>  17. Kalisz – Jedno z najstarszych polskich miast z ciekawą historią i urokliwą zabudową.
+                    <br>  18. Bielsko-Biała – Piękne miasto u podnóża Beskidów, z architekturą przypominającą Wiedeń.
+                    <br>  19. Opole – Stolica polskiej piosenki z urokliwą starówką i wyspą Pasieka.
+                    <br>  20. Rzeszów – Dynamicznie rozwijające się miasto z malowniczym rynkiem i pięknymi bulwarami nad Wisłokiem.</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="{% static 'js/accordion.js' %}"></script>
+</body>
+</html>
+{% endblock %}
