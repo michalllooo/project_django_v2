@@ -120,7 +120,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "sklep" / "static",  # Ensure this path is correct
+    BASE_DIR / "online" / "sklep" / "static" ,  # Ensure this path is correct
 ]
 
 # Add this line to ensure static files are collected correctly
