@@ -1,0 +1,2 @@
+# Ignoruj folder z plikami statycznymi zebranymi przez collectstatic
+staticfiles/
