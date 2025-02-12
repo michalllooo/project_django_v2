@@ -120,11 +120,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "online" / "sklep" / "static" ,  # Ensure this path is correct
+    BASE_DIR / "sklep" / "static",  # Ensure this path is correct
 ]
 
 # Add this line to ensure static files are collected correctly
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'online'/ 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
