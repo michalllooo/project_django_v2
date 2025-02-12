@@ -124,7 +124,7 @@ STATICFILES_DIRS = [
 ]
 
 # Add this line to ensure static files are collected correctly
-STATIC_ROOT = BASE_DIR / 'online'/ 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'sklep'/ 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
