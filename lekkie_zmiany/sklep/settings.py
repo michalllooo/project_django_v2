@@ -25,9 +25,7 @@ SECRET_KEY = 'django-insecure-j4=lixo$+6n%jzcx6a##dv=z3sannk90oxffbu*lpw6a=0z=)m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'przewodnik-pl-6a0x.onrender.com'
-]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -50,7 +48,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'sklep.urls'
@@ -118,16 +115,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATIC_URL = '/static/'
-import os
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "sklep" / "static",  # Ensure this path is correct
+]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Tak powinno być!
+# Add this line to ensure static files are collected correctly
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
