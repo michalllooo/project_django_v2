@@ -1,0 +1,105 @@
+{% block content %}
+<link rel="stylesheet" href="../../static/css/wojw.css">
+
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Mazowieckie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Warszawa</p>
+                Warszawa, miasto stołeczne Warszawa[3] (m.st. Warszawa)[4] – stolica Polski[5] i województwa mazowieckiego[6], najludniejsze miasto w kraju i drugie (po Gdańsku) pod względem powierzchni[1], 
+                <img src="../../static/images/miasta/wars.jpeg" alt="warszawa">
+               
+            </div>
+            <div class="city">
+                <p>Zamek Królewski</p>
+                Barokowo-klasycystyczna rezydencja królów Polski, odbudowana po II wojnie światowej. W środku można podziwiać bogato zdobione sale, królewskie apartamenty i obrazy Canaletta.
+                <br><br>  <img src="../../static/images/miejsca/zamew.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Muzeum Powstania Warszawskiego</p>
+                Interaktywne muzeum poświęcone bohaterom Powstania Warszawskiego z 1944 roku. Ekspozycja łączy archiwalne nagrania, rekwizyty wojenne i multimedialne instalacje.
+                <br><br>   <img src="../../static/images/miejsca/muzew.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Łazienki Królewskie</p>
+                Rozległy park z pałacem na wodzie, amfiteatrem i pomnikiem Chopina. Miejsce to zachwyca pięknem przyrody i bogatą historią.
+                <br><br>   <img src="../../static/images/miejsca/lazi.jpeg" alt="City 4">
+              
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Płock</p>
+                Płock – miasto w Polsce, na prawach powiatu, położone na Pojezierzu Dobrzyńskim i w Kotlinie Płockiej, nad Wisłą, w województwie mazowieckim, siedziba ziemskiego powiatu płockiego; historyczna stolica Mazowsza oraz stolica Polski w latach 1079–1138;
+                <img src="../../static/images/miasta/ploc.jpeg" alt="Płock">
+               
+            </div>
+            <div class="city">
+                <p>Katedra Wniebowzięcia NMP</p>
+                Jedna z najstarszych katedr w Polsce, skrywająca groby władców Polski. W jej wnętrzu można podziwiać piękne freski i słynną Złotą Bramę.
+                <br><br>  <img src="../../static/images/miejsca/katep.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Muzeum Mazowieckie</p>
+                Słynie z unikalnej kolekcji secesji, prezentującej meble, obrazy i biżuterię z przełomu XIX i XX wieku. To prawdziwa gratka dla miłośników sztuki i designu.
+                <br><br>  <img src="../../static/images/miejsca/muzep.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Bulwary nad Wisłą</p>
+                Nowoczesna promenada idealna na spacery i relaks. Latem odbywają się tu koncerty, festiwale i pokazy plenerowe.
+                <br><br>  <img src="../../static/images/miejsca/bulw.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Radom</p>
+                Radom – miasto na prawach powiatu w centralno-wschodniej Polsce w województwie mazowieckim, położone nad rzeką Mleczną.
+
+                Największy ośrodek miejski w widłach Wisły i Pilicy, drugie pod względem wielkości miasto województwa mazowieckiego. 
+                <img src="../../static/images/miasta/rado.jpeg" alt="Radom">
+               
+            </div>
+            <div class="city">
+                <p>Muzeum Wsi Radomskiej</p>
+                Skansen prezentujący tradycyjne drewniane chaty, młyny i kuźnie z regionu. To świetne miejsce, by poczuć klimat dawnej wsi mazowieckiej.
+                <br><br> <img src="../../static/images/miejsca/muzer.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Zamek Królewski w Radomiu</p>
+                Pozostałości średniowiecznego zamku, który niegdyś był ważnym ośrodkiem władzy. Obecnie na jego terenie odbywają się wydarzenia kulturalne i rekonstrukcje historyczne.
+                <br><br>  <img src="../../static/images/miejsca/zamer.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Deptak na ulicy Żeromskiego</p>
+                Główna arteria miasta, pełna klimatycznych kawiarni i zabytkowych kamienic. To idealne miejsce na spacer i poznanie historycznego centrum Radomia.
+                <br><br> <img src="../../static/images/miejsca/dept.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+    </div>
+   
+</article>
+
+</body>
+{% endblock %}
