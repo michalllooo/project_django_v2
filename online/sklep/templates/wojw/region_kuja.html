@@ -1,6 +1,78 @@
-{% extends 'base_generic.html' %}
-
 {% block content %}
-<h1>Kujawsko-Pomorskie</h1>
-<p>Informacje o województwie kujawsko-pomorskim.</p>
+<link rel="stylesheet" href="../../static/css/wojw.css">
+
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Kujawsko-Pomorskie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Bydgoszcz</p>
+                Bydgoszcz (łac. Bidgostia[4], niem. Bromberg) – miasto na prawach powiatu w północnej Polsce, siedziba wojewody i jednostek mu podporządkowanych oraz największe miasto województwa kujawsko-pomorskiego[5].
+                <img src="../../static/images/miasta/bydg.jpeg" alt="Bydgoszcz">
+               
+            </div>
+            <div class="city">
+                <p>Wyspa Młyńska</p>
+                Zielona oaza w centrum miasta, otoczona zabytkowymi młynami i kanałami Brdy. To idealne miejsce na spacer, piknik lub zwiedzanie okolicznych muzeów.
+                <br><br>  <img src="../../static/images/miejsca/wysp.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Spichrze nad Brdą</p>
+                Charakterystyczne budowle, będące symbolem Bydgoszczy, dawniej służące do przechowywania zboża. Obecnie mieszczą się tu muzea i galerie sztuki.
+                <br><br>   <img src="../../static/images/miejsca/spic.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Exploseum </p>
+                Podziemny kompleks fabryki z czasów II wojny światowej, w którym produkowano materiały wybuchowe. Dziś to muzeum historii techniki i wojskowości, oferujące fascynujące zwiedzanie tuneli i hal produkcyjnych.
+                <br><br>   <img src="../../static/images/miejsca/expl.jpeg" alt="City 4">
+              
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Toruń</p>
+                Toruńⓘ (niem. Thorn, łac. Thorunia, Torunium) – miasto na prawach powiatu w północnej Polsce, jedna z dwóch stolic województwa kujawsko-pomorskiego – siedziba marszałka, zarządu i sejmiku województwa oraz jednostek im podporządkowanych[3].
+                <img src="../../static/images/miasta/toru.jpeg" alt="Płock">
+               
+            </div>
+            <div class="city">
+                <p>Stare Miasto</p>
+                Jeden z najlepiej zachowanych średniowiecznych zespołów miejskich w Polsce, wpisany na listę UNESCO. Warto zobaczyć Ratusz Staromiejski, gotyckie kościoły i urokliwe kamienice.
+                <br><br>  <img src="../../static/images/miejsca/star.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Dom Kopernika</p>
+                Miejsce urodzenia słynnego astronoma Mikołaja Kopernika, obecnie muzeum poświęcone jego życiu i odkryciom. Wystawy interaktywne pozwalają lepiej zrozumieć jego teorię heliocentryczną.
+                <br><br>  <img src="../../static/images/miejsca/domk.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Żywe Muzeum Piernika</p>
+                Interaktywne muzeum, w którym można własnoręcznie upiec tradycyjne toruńskie pierniki. To atrakcja zarówno dla dorosłych, jak i dzieci.
+                <br><br>  <img src="../../static/images/miejsca/zywem.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+        
+    </div>
+   
+</article>
+
+</body>
 {% endblock %}

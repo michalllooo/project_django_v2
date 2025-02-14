@@ -1,6 +1,54 @@
-{% extends 'base_generic.html' %}
-
 {% block content %}
-<h1>Kujawsko-Pomorskie</h1>
-<p>Informacje o województwie kujawsko-pomorskim.</p>
+<link rel="stylesheet" href="../../static/css/wojw.css">
+
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Podlaskie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Białystok</p>
+                Białystok – miasto na prawach powiatu w północno-wschodniej Polsce, położone na Nizinie Północnopodlaskiej, nad rzeką Białą. Jest stolicą województwa podlaskiego i siedzibą władz ziemskiego powiatu białostockiego.
+                <img src="../../static/images/miasta/bial.jpeg" alt="Białystok">
+               
+            </div>
+            <div class="city">
+                <p>Pałac Branickich </p>
+                Barokowa rezydencja zwana „Wersalem Północy”, otoczona przepięknymi ogrodami. Dziś mieści się tu Uniwersytet Medyczny, ale część pałacu i ogrody są dostępne dla zwiedzających.
+                <br><br>  <img src="../../static/images/miejsca/pala.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Muzeum Pamięci Sybiru</p>
+                Nowoczesne muzeum dokumentujące losy Polaków zesłanych na Syberię. Ekspozycja łączy autentyczne relacje, multimedialne prezentacje i poruszające eksponaty historyczne.
+                <br><br>   <img src="../../static/images/miejsca/muzeb.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Park Planty i Fontanna Multimedialna</p>
+                Zielone serce miasta, idealne na spacer i odpoczynek. W letnie wieczory odbywają się tu efektowne pokazy świetlno-muzyczne.
+                <br><br>   <img src="../../static/images/miejsca/parkb.jpeg" alt="City 4">
+              
+       
+        </div>
+       
+        </div>
+       
+    </div>
+   
+</article>
+
+</body>
 {% endblock %}
