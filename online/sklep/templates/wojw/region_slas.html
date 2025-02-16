@@ -1,6 +1,103 @@
-{% extends 'base_generic.html' %}
-
 {% block content %}
-<h1>Kujawsko-Pomorskie</h1>
-<p>Informacje o województwie kujawsko-pomorskim.</p>
+<link rel="stylesheet" href="../../static/css/wojw.css">
+
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Śląskie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Katowice</p>
+                Katowice – miasto na prawach powiatu w południowej Polsce, położone we wschodniej części Górnego Śląska, na Wyżynie Śląskiej.
+                <img src="../../static/images/miasta/kato.jpeg" alt="Katowice">
+               
+            </div>
+            <div class="city">
+                <p>Spodek</p>
+                Ikoniczna hala widowiskowo-sportowa w kształcie latającego spodka, symbol Katowic. Odbywają się tu największe koncerty, wydarzenia sportowe i targi.
+                <br><br>  <img src="../../static/images/miejsca/spod.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Nikiszowiec </p>
+                Zabytkowa dzielnica górnicza z ceglastą zabudową i unikalnym klimatem. Spacerując wąskimi uliczkami, można poczuć atmosferę dawnego Śląska i spróbować tradycyjnych potraw w lokalnych restauracjach.
+                <br><br>   <img src="../../static/images/miejsca/niki.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Muzeum Śląskie</p>
+                Nowoczesne muzeum zlokalizowane na terenie dawnej kopalni, oferujące interaktywne wystawy o historii i kulturze regionu. Taras widokowy na wieży wyciągowej pozwala podziwiać panoramę miasta.
+                <br><br>   <img src="../../static/images/miejsca/muzeka.jpeg" alt="City 4">
+              
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Częstochowa</p>
+                Częstochowa – miasto na prawach powiatu w południowej Polsce, w województwie śląskim, siedziba powiatu częstochowskiego. 
+                <img src="../../static/images/miasta/czes.jpeg" alt="Częstochowa">
+               
+            </div>
+            <div class="city">
+                <p>Jasna Góra</p>
+                Najważniejsze sanktuarium maryjne w Polsce, przyciągające pielgrzymów z całego świata. W klasztorze przechowywany jest cudowny obraz Matki Boskiej Częstochowskiej.
+                <br><br>  <img src="../../static/images/miejsca/jasnc.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Muzeum Produkcji Zapałek</p>
+                Unikalne miejsce, gdzie można zobaczyć, jak powstają zapałki oraz poznać historię fabryki działającej od ponad 100 lat. W muzeum znajdują się także stare maszyny produkcyjne.
+                <br><br>  <img src="../../static/images/miejsca/muzec.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p> Aleja Najświętszej Maryi Panny</p>
+                Główna arteria miasta prowadząca do Jasnej Góry, pełna kawiarni, sklepów i zabytkowych budynków. To idealne miejsce na spacer i podziwianie architektury Częstochowy.
+                <br><br>  <img src="../../static/images/miejsca/alej.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Zabrze</p>
+                Zabrze – miasto w Polsce na prawach powiatu położone w województwie śląskim, na Wyżynie Śląskiej, nad rzekami Kłodnicą i Bytomką.
+                <img src="../../static/images/miasta/zabr.jpeg.jpeg" alt="Wałbrzych">
+               
+            </div>
+            <div class="city">
+                <p>Kopalnia Guido</p>
+                Zabytkowa kopalnia węgla kamiennego, gdzie można zjechać 320 metrów pod ziemię. Zwiedzanie obejmuje przejażdżkę górniczą kolejką i pokaz pracy maszyn wydobywczych.
+                <br><br> <img src="../../static/images/miejsca/kopa.jpeg.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Sztolnia Królowa Luiza </p>
+                Podziemny kompleks wypełniony atrakcjami, w tym przejażdżką łodzią po dawnych wyrobiskach. Można tu zobaczyć, jak wyglądała praca górników przed wiekami.
+                <br><br>  <img src="../../static/images/miejsca/szto.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Dom Muzyki i Tańca </p>
+                Jedna z najważniejszych sal koncertowych na Śląsku, goszcząca największe wydarzenia kulturalne. Odbywają się tu koncerty symfoniczne, operowe oraz występy gwiazd polskiej i światowej sceny muzycznej.
+                <br><br> <img src="../../static/images/miejsca/dom.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+    </div>
+   
+</article>
+
+</body>
 {% endblock %}

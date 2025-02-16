@@ -1,6 +1,103 @@
-{% extends 'base_generic.html' %}
-
 {% block content %}
-<h1>Kujawsko-Pomorskie</h1>
-<p>Informacje o województwie kujawsko-pomorskim.</p>
+<link rel="stylesheet" href="../../static/css/wojw.css">
+
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Małopolskie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Kraków</p>
+                Kraków, Stołeczne Królewskie Miasto Kraków – miasto na prawach powiatu położone w południowej Polsce nad Wisłą, drugie co do liczby mieszkańców.
+                <img src="../../static/images/miasta/krak.jpeg" alt="Wrocław">
+               
+            </div>
+            <div class="city">
+                <p>Zamek Królewski na Wawelu</p>
+                Jeden z najważniejszych zabytków Polski, dawna siedziba królów. Można tu zobaczyć Katedrę Wawelską, Groby Królewskie i słynnego Smoka Wawelskiego.
+                <br><br>  <img src="../../static/images/miejsca/zamekr.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Rynek Główny i Sukiennice</p>
+                Serce Krakowa, największy średniowieczny rynek w Europie. Znajdują się tu zabytkowe kamienice, Kościół Mariacki i kultowe Sukiennice, pełne sklepików i galerii sztuki.
+                <br><br>   <img src="../../static/images/miejsca/suki.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Kopalnia Soli w Wieliczce</p>
+                Jedna z najstarszych kopalni soli na świecie, wpisana na listę UNESCO. Podziemne kaplice, solne rzeźby i jeziora sprawiają, że to magiczne miejsce przyciąga turystów z całego świata.
+                <br><br>   <img src="../../static/images/miejsca/kopak.jpeg" alt="City 4">
+              
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Zakopane</p>
+                Zakopane – miasto w południowej Polsce, w województwie małopolskim, siedziba powiatu tatrzańskiego. Największa miejscowość w bezpośrednim otoczeniu Tatr, duży ośrodek sportów zimowych, potocznie nazywany zimową stolicą Polski.
+                <img src="../../static/images/miasta/zako.jpeg" alt="Zakopane">
+               
+            </div>
+            <div class="city">
+                <p>Gubałówka</p>
+                Popularne wzgórze z pięknym widokiem na Tatry, na które można wjechać kolejką linowo-terenową. Na szczycie znajdują się restauracje, stragany z pamiątkami i ścieżki spacerowe.
+                <br><br>  <img src="../../static/images/miejsca/guba.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Morskie Oko</p>
+                Największe i jedno z najpiękniejszych jezior tatrzańskich, do którego prowadzi malownicza trasa. To obowiązkowy punkt dla turystów odwiedzających Tatry.
+                <br><br>  <img src="../../static/images/miejsca/mors.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p> Krupówki</p>
+                Główna ulica Zakopanego, pełna sklepów, restauracji i tradycyjnych góralskich karczm. Można tu spróbować oscypka, kupić pamiątki i poczuć atmosferę górskiego kurortu.
+                <br><br>  <img src="../../static/images/miejsca/krup.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Oświęcim</p>
+                Oświęcim – miasto w województwie małopolskim, siedziba władz powiatu oświęcimskiego i dwóch gmin – miejskiej oraz gminy wiejskiej Oświęcim.
+                <img src="../../static/images/miasta/oswi.jpeg" alt="Oświęcim">
+               
+            </div>
+            <div class="city">
+                <p>Miejsce Pamięci i Muzeum Auschwitz-Birkenau</p>
+                Miejsce pamięci po byłym niemieckim obozie koncentracyjnym i zagłady. Zwiedzanie tego miejsca to poruszające doświadczenie, przypominające o tragicznych wydarzeniach II wojny światowej.
+                <br><br> <img src="../../static/images/miejsca/ausw.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Zamek w Oświęcimiu </p>
+                Średniowieczna warownia z malowniczą wieżą widokową. Wewnątrz mieści się muzeum prezentujące historię miasta i zamku.
+                <br><br>  <img src="../../static/images/miejsca/zameos.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Synagoga i Muzeum Żydowskie</p>
+                Jedna z najstarszych synagog w Polsce, obecnie pełniąca funkcję muzeum. Można tu poznać historię i kulturę żydowskiej społeczności Oświęcimia.
+                <br><br> <img src="../../static/images/miejsca/synao.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+    </div>
+   
+</article>
+
+</body>
 {% endblock %}

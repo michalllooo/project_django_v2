@@ -1,6 +1,69 @@
-{% extends 'base_generic.html' %}
-
 {% block content %}
-<h1>Kujawsko-Pomorskie</h1>
-<p>Informacje o województwie kujawsko-pomorskim.</p>
+<link rel="stylesheet" href="../../static/css/wojw.css">
+
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Łódzkie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Łódź</p>
+                Łódź – miasto na prawach powiatu w środkowej Polsce. Większość dzisiejszej Łodzi znajduje się w historycznej ziemi łęczyckiej, a niewielka część miasta w ziemi sieradzkiej.
+                <img src="../../static/images/miasta/lodz.jpeg" alt="Łódź">
+               
+            </div>
+            <div class="city">
+                <p>Ulica Piotrkowska </p>
+                Najsłynniejsza ulica Łodzi, pełna zabytkowych kamienic, kawiarni, restauracji i murali. To centrum życia kulturalnego i turystycznego miasta.
+                <br><br>  <img src="../../static/images/miejsca/ulic.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>EC1 – Centrum Nauki i Techniki</p>
+                Interaktywne muzeum mieszczące się w dawnej elektrowni, pełne eksperymentów i nowoczesnych instalacji. To świetne miejsce dla miłośników nauki i techniki.
+                <br><br>   <img src="../../static/images/miejsca/cent.jpeg" alt="City 3">
+               
+            </div>
+          
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Piotrków Trybunalski</p>
+                Piotrków Trybunalski – miasto na prawach powiatu w centralnej Polsce. Piotrków był miastem królewskim w starostwie piotrkowskim w powiecie piotrkowskim województwa sieradzkiego w końcu XVI wieku.
+                <img src="../../static/images/miasta/piot.jpeg" alt="Piotrków Trybunalski">
+               
+            </div>
+            <div class="city">
+                <p>Zamek Królewski</p>
+                Niewielka, ale ważna rezydencja królewska, w której obradowały sejmy Rzeczypospolitej. Dziś mieści muzeum, prezentujące historię miasta i regionu.
+                <br><br>  <img src="../../static/images/miejsca/zamep.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Wielka Synagoga</p>
+                Jeden z najcenniejszych zabytków żydowskich w Polsce, świadectwo wielokulturowej przeszłości miasta. Choć nie pełni już funkcji religijnej, jej architektura zachwyca turystów.
+                <br><br>  <img src="../../static/images/miejsca/syna.jpeg" alt="City 3">
+               
+            </div>
+          
+       
+       
+        </div>
+    </div>
+   
+</article>
+
+</body>
 {% endblock %}

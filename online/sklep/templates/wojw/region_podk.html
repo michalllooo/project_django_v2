@@ -1,6 +1,48 @@
-{% extends 'base_generic.html' %}
-
 {% block content %}
-<h1>Kujawsko-Pomorskie</h1>
-<p>Informacje o województwie kujawsko-pomorskim.</p>
+<link rel="stylesheet" href="../../static/css/wojw.css">
+
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Podkarpackie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Rzeszów</p>
+                Rzeszów – miasto na prawach powiatu w południowo-wschodniej Polsce, stolica województwa podkarpackiego i ośrodek aglomeracji rzeszowskiej.
+                <img src="../../static/images/miasta/rzes.jpeg" alt="Rzeszów">
+               
+            </div>
+            <div class="city">
+                <p>Zamek Lubomirskich</p>
+                Dawna rezydencja magnacka, później przekształcona w twierdzę. Choć obecnie mieści się tu sąd, można podziwiać jego monumentalną architekturę i spacerować wokół murów.
+                <br><br>  <img src="../../static/images/miejsca/zamerz.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Podziemna Trasa Turystyczna</p>
+                Sieć historycznych piwnic i korytarzy pod Rynkiem, opowiadająca o życiu Rzeszowa w dawnych wiekach. Zwiedzający mogą zobaczyć rekonstrukcje dawnych sklepów i schronów.
+                <br><br>   <img src="../../static/images/miejsca/podzr.jpeg" alt="City 3">
+               
+            </div>
+           
+     
+        
+        </div>
+    </div>
+   
+</article>
+
+</body>
 {% endblock %}

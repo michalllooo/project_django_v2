@@ -1,6 +1,103 @@
-{% extends 'base_generic.html' %}
-
 {% block content %}
-<h1>Dolnośląskie</h1>
-<p>Informacje o województwie dolnośląskim.</p>
+<link rel="stylesheet" href="../../static/css/wojw.css">
+
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Dolnośląskie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Wrocław</p>
+                Wrocławⓘ (niem. Breslauⓘ, śl.-niem. Brassel, Gruß-Brassel[5][6], łac. Vratislavia, cz. Vratislav, węg. Boroszló) – miasto na prawach powiatu w południowo-zachodniej Polsce, siedziba władz województwa dolnośląskiego i powiatu wrocławskiego.
+                <img src="../../static/images/miasta/wroc.jpeg" alt="Wrocław">
+               
+            </div>
+            <div class="city">
+                <p>Rynek i Stare Miasto</p>
+                Jeden z największych i najpiękniejszych rynków w Polsce, otoczony kolorowymi kamienicami. Na jego środku stoi gotycki Ratusz, a w pobliżu można spotkać słynne wrocławskie krasnale.
+                <br><br>  <img src="../../static/images/miejsca/rynew.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Ostrów Tumski</p>
+                Najstarsza część Wrocławia, pełna zabytkowych kościołów i klimatycznych latarni gazowych. To idealne miejsce na spacer i podziwianie gotyckiej architektury.
+                <br><br>   <img src="../../static/images/miejsca/ostrw.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Hala Stulecia i Pergola</p>
+                Unikatowa budowla wpisana na listę UNESCO, otoczona ogrodami i fontanną multimedialną. Latem odbywają się tu widowiskowe pokazy światła i wody.
+                <br><br>   <img src="../../static/images/miejsca/hala.jpeg" alt="City 4">
+              
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Karpacz</p>
+                Karpacz – miasto w województwie dolnośląskim, w powiecie karkonoskim. Położone w Sudetach Zachodnich, w dolinie rzeki Łomnicy.
+                <img src="../../static/images/miasta/karp.jpeg" alt="Karpacz">
+               
+            </div>
+            <div class="city">
+                <p>Świątynia Wang</p>
+                XIII-wieczny drewniany kościół sprowadzony z Norwegii, będący unikalnym przykładem skandynawskiej architektury sakralnej. Znajduje się na malowniczym wzgórzu, skąd rozciąga się piękny widok na Karkonosze.
+                <br><br>  <img src="../../static/images/miejsca/wang.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Kolejka linowa na Kopę</p>
+                Popularna atrakcja turystyczna, umożliwiająca szybkie dotarcie na szczyt i rozpoczęcie wędrówki na Śnieżkę. Z gondoli można podziwiać zapierające dech w piersiach krajobrazy.
+                <br><br>  <img src="../../static/images/miejsca/kole.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p> Muzeum Karkonoskie Tajemnice</p>
+                Interaktywna ekspozycja poświęcona legendom i historii Karkonoszy. Zwiedzający mogą poznać postać Ducha Gór i inne lokalne mity.
+                <br><br>  <img src="../../static/images/miejsca/muzek.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Wałbrzych</p>
+                Wałbrzych – miasto na prawach powiatu na południowym zachodzie Polski, w województwie dolnośląskim nad Pełcznicą. 
+                <img src="../../static/images/miasta/walb.jpeg" alt="Wałbrzych">
+               
+            </div>
+            <div class="city">
+                <p>Zamek Książ</p>
+                Trzeci co do wielkości zamek w Polsce, otoczony malowniczymi tarasami i parkiem. Wnętrza pełne są historycznych sal, a pod zamkiem kryją się tajemnicze podziemia.
+                <br><br> <img src="../../static/images/miejsca/zamewa.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Palmiarnia w Wałbrzychu </p>
+                Unikalny ogród botaniczny z egzotycznymi roślinami i klimatycznymi alejkami. Wybudowana przez właścicieli Zamku Książ, jest jedną z najstarszych palmiarni w Polsce.
+                <br><br>  <img src="../../static/images/miejsca/palmw.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Podziemne Miasto Osówka</p>
+                Tajemniczy kompleks korytarzy i bunkrów z czasów II wojny światowej, będący częścią projektu Riese. Zwiedzanie z przewodnikiem pozwala odkryć mroczne sekrety III Rzeszy.
+                <br><br> <img src="../../static/images/miejsca/podz.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+    </div>
+   
+</article>
+
+</body>
 {% endblock %}

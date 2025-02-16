@@ -1,6 +1,52 @@
-{% extends 'base_generic.html' %}
-
 {% block content %}
-<h1>Kujawsko-Pomorskie</h1>
-<p>Informacje o województwie kujawsko-pomorskim.</p>
+<link rel="stylesheet" href="../../static/css/wojw.css">
+
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Opolskie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Opole</p>
+                Opole – miasto na prawach powiatu w południowo-zachodniej Polsce, siedziba władz województwa opolskiego i powiatu opolskiego.
+                <img src="../../static/images/miasta/opol.jpeg" alt="Opole">
+               
+            </div>
+            <div class="city">
+                <p>Wieża Piastowska</p>
+                Jeden z najstarszych zabytków Opola, pozostałość po średniowiecznym zamku Piastów. Z jej szczytu roztacza się piękna panorama miasta.
+                <br><br>  <img src="../../static/images/miejsca/wiez.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Muzeum Polskiej Piosenki</p>
+                Unikalne miejsce poświęcone historii polskiej muzyki rozrywkowej. Można tu posłuchać przebojów, zobaczyć archiwalne nagrania i nagrać własną piosenkę.
+                <br><br>   <img src="../../static/images/miejsca/muzeo.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Wyspa Bolko</p>
+                Zielona oaza w centrum miasta, idealna do spacerów i rekreacji. Znajduje się tu również opolskie zoo, jedno z najładniejszych w Polsce.
+                <br><br>   <img src="../../static/images/miejsca/wyspo.jpeg" alt="City 4">
+              
+            </div>
+        </div>
+        
+    </div>
+   
+</article>
+
+</body>
 {% endblock %}
