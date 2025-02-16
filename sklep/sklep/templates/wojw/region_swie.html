@@ -1,0 +1,79 @@
+{% block content %}
+<link rel="stylesheet" href="../../static/css/wojw.css">
+
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Świętokrzyskie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Kielce</p>
+                Kielce – miasto na prawach powiatu w południowo-wschodniej Polsce, stolica województwa świętokrzyskiego. Położone w Górach Świętokrzyskich, nad rzeką Silnicą, historycznie w Małopolsce.
+                <img src="../../static/images/miasta/kiel.jpeg" alt="Kielce">
+               
+            </div>
+            <div class="city">
+                <p>Zamek Biskupów Krakowskich </p>
+                Barokowa rezydencja z XVII wieku, dziś siedziba Muzeum Narodowego. W środku można podziwiać bogate wnętrza oraz kolekcję sztuki i eksponaty związane z historią regionu.
+                <br><br>  <img src="../../static/images/miejsca/zamek.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Kadzielnia </p>
+                Rezerwat przyrody z efektownym kamieniołomem i podziemnymi jaskiniami. To także popularne miejsce koncertów i wydarzeń plenerowych w amfiteatrze.
+                <br><br>   <img src="../../static/images/miejsca/kadz.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Geopark Kielce – Centrum Geoedukacji</p>
+                Nowoczesne centrum nauki poświęcone geologii Gór Świętokrzyskich. Można tu zobaczyć interaktywne wystawy oraz przeżyć symulację podróży do wnętrza Ziemi.
+                <br><br>   <img src="../../static/images/miejsca/geon.jpeg" alt="City 4">
+              
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Sandomierz</p>
+                Sandomierz – miasto w województwie świętokrzyskim, w powiecie sandomierskim, położone nad Wisłą, na siedmiu wzgórzach. 
+                <img src="../../static/images/miasta/sand.jpeg" alt="Sandomierz">
+               
+            </div>
+            <div class="city">
+                <p>Podziemna Trasa Turystyczna</p>
+                System dawnych piwnic i tuneli, którymi poruszali się kupcy w średniowieczu. Trasa pełna jest legend, a przewodnicy opowiadają o duchu Haliny Krępianki, który rzekomo tam straszy.
+                <br><br>  <img src="../../static/images/miejsca/podzs.jpg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Brama Opatowska</p>
+                Jedyna zachowana brama wjazdowa do średniowiecznego Sandomierza, z której roztacza się piękny widok na miasto. To jeden z symboli Sandomierza.
+                <br><br>  <img src="../../static/images/miejsca/bram.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p> Wąwóz Królowej Jadwigi </p>
+                Malowniczy wąwóz lessowy o stromych ścianach, idealny na spacer. Według legendy często przechadzała się tędy królowa Jadwiga.
+                <br><br>  <img src="../../static/images/miejsca/wawo.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+       
+        
+    </div>
+   
+</article>
+
+</body>
+{% endblock %}

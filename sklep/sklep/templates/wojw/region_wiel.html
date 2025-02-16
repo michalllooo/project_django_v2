@@ -1,0 +1,103 @@
+{% block content %}
+<link rel="stylesheet" href="../../static/css/wojw.css">
+
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Wielkopolskie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Poznań</p>
+                Poznań, Stołeczne Miasto Poznań[8] (niem. Posen, łac. Posnania) – miasto na prawach powiatu w zachodniej Polsce, położone na Pojezierzu Wielkopolskim, nad rzeką Wartą, u ujścia Cybiny. Historyczna stolica Wielkopolski, od 1999 r. siedziba władz województwa wielkopolskiego i powiatu poznańskiego
+                <img src="../../static/images/miasta/pozn.jpeg" alt="Poznan">
+               
+            </div>
+            <div class="city">
+                <p>Stary rynek i ratusz</p>
+               Serce miasta z pięknymi kamienicami i renesansowym ratuszem. Codziennie o 12:00 na wieży ratusza pojawiają się słynne koziołki.
+                <br><br>  <img src="../../static/images/miejsca/ratu.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Ostrów Tumski</p>
+                Najstarsza część Poznania, gdzie znajduje się katedra św. Piotra i Pawła. To tu Mieszko I przyjął chrzest, co czyni to miejsce kolebką polskiej państwowości.
+                <br><br>   <img src="../../static/images/miejsca/ostr.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Palmiarnia Poznańska</p>
+                Jedna z największych palmiarni w Europie, z egzotycznymi roślinami i akwariami. To świetne miejsce na spacer wśród tropikalnej roślinności.
+                <br><br>   <img src="../../static/images/miejsca/palm.jpeg" alt="City 4">
+              
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Kalisz</p>
+                Miasto na prawach powiatu, drugie pod względem liczby ludności i trzecie pod względem powierzchni w województwie wielkopolskim, historyczna stolica Wielkopolski obok Poznania[6][7], stolica Kaliskiego[8], siedziba powiatu kaliskiego
+                <img src="../../static/images/miasta/kali.jpeg" alt="kalisz">
+               
+            </div>
+            <div class="city">
+                <p>Bazylika św.Józefa</p>
+                Ważne miejsce pielgrzymkowe i barokowa perła Kalisza. Wewnątrz znajduje się słynny obraz św. Rodziny, otoczony kultem od XVII wieku.
+                <br><br>  <img src="../../static/images/miejsca/joze.jpg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Park miejski</p>
+                Jeden z najstarszych parków miejskich w Polsce, założony w XIX wieku. Znajdują się tu malownicze stawy, mostki i różnorodne gatunki drzew.
+                <br><br>  <img src="../../static/images/miejsca/parkk.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>  Rezerwat Archeologiczny na Zawodziu</p>
+              Odtworzona wczesnośredniowieczna osada Kalisza. Można tu zobaczyć dawne chaty, umocnienia i poznać historię regionu.
+                <br><br>  <img src="../../static/images/miejsca/reze.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Gniezno</p>
+                Świnoujście (niem. Swinemünde[4]) – miasto na prawach powiatu, uzdrowisko w północno-zachodnim krańcu Polski, najdalej wysunięte na północny zachód miasto w kraju, w województwie zachodniopomorskim z portem morskim i kąpieliskiem, położone nad cieśniną Świną oraz nad Morzem Bałtyckim, 
+                <img src="../../static/images/miasta/gnie.jpeg" alt="Gniezno">
+               
+            </div>
+            <div class="city">
+                <p>Katedra Gnieźnieńska</p>
+                Miejsce koronacji pierwszych królów Polski. Słynie z Drzwi Gnieźnieńskich, unikalnego zabytku sztuki romańskiej przedstawiającego sceny z życia św. Wojciecha.
+                <br><br> <img src="../../static/images/miejsca/kateg.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Muzeum Początków Państwa Polskiego</p>
+                Nowoczesna ekspozycja pokazująca historię pierwszych Piastów. Można tu zobaczyć makiety, filmy i liczne artefakty z epoki wczesnego średniowiecza.
+                <br><br>  <img src="../../static/images/miejsca/muzeg.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Jezioro Jelonek i Park Piastowski</p>
+                Zielona oaza spokoju w sercu miasta. Idealne miejsce na spacer z widokiem na katedrę i rekreację nad wodą.
+                <br><br> <img src="../../static/images/miejsca/jezig.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+    </div>
+   
+</article>
+
+</body>
+{% endblock %}
