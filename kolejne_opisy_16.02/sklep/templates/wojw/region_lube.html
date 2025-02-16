@@ -1,0 +1,79 @@
+{% block content %}
+<link rel="stylesheet" href="../../static/css/wojw.css">
+
+<body>
+<header>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+            <span>Welcome, {{ user.username }}!</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
+<article>
+    <h1>Lubelskie</h1>
+    <p>Najważniejsze miasta</p>
+    <div class="blocks-container">
+        <div class="block">
+            <div class="city">
+                <p>Lublin</p>
+                Lublin – miasto na prawach powiatu we wschodniej Polsce, stolica województwa i powiatu lubelskiego, centralny ośrodek aglomeracji lubelskiej i Lubelskiego Obszaru Metropolitalnego.
+                <img src="../../static/images/miasta/lubl.jpeg" alt="Lublin">
+               
+            </div>
+            <div class="city">
+                <p>Zamek Lubelski</p>
+                Gotycko-renesansowa twierdza z unikalną Kaplicą Trójcy Świętej, której wnętrza zdobią XIV-wieczne freski bizantyjsko-ruskie. Dziś zamek mieści muzeum, a z wieży widokowej można podziwiać panoramę miasta.
+                <br><br>  <img src="../../static/images/miejsca/zamel.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Lubelska Trasa Podziemna</p>
+                System dawnych piwnic i korytarzy pod Starym Miastem, pełen legend i opowieści o historii Lublina. Kulminacyjnym punktem zwiedzania jest widowisko światło-dźwięk przedstawiające wielki pożar miasta.
+                <br><br>   <img src="../../static/images/miejsca/tras.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p>Ogród Botaniczny UMCS</p>
+                Zielona oaza z tysiącami gatunków roślin, malowniczymi alejkami i zabytkowym dworkiem. Idealne miejsce na spacer i odpoczynek wśród przyrody.
+                <br><br>   <img src="../../static/images/miejsca/ogr.jpeg" alt="City 4">
+              
+            </div>
+        </div>
+        <div class="block">
+            <div class="city">
+                <p>Zamość</p>
+                Zamość – miasto na prawach powiatu w Polsce w południowej części województwa lubelskiego, siedziba władz powiatu zamojskiego i gminy wiejskiej Zamość
+                <img src="../../static/images/miasta/zamo.jpeg" alt="Zamość">
+               
+            </div>
+            <div class="city">
+                <p>Rynek Wielki i Ratusz</p>
+                Perła renesansu, wpisana na listę UNESCO, z kolorowymi kamienicami i monumentalnym ratuszem z charakterystycznymi schodami. To serce miasta, pełne kawiarenek i letnich wydarzeń kulturalnych.
+                <br><br>  <img src="../../static/images/miejsca/rynez.jpeg" alt="City 2">
+               
+            </div>
+            <div class="city">
+                <p>Twierdza Zamość</p>
+                Dawne umocnienia obronne miasta, z zachowanymi bastionami i bramami. Można zwiedzać podziemia, bastion VII oraz przespacerować się po fosach.
+                <br><br>  <img src="../../static/images/miejsca/twie.jpeg" alt="City 3">
+               
+            </div>
+            <div class="city">
+                <p> Zoo w Zamościu</p>
+                Jedno z najstarszych ogrodów zoologicznych w Polsce, w którym można zobaczyć rzadkie gatunki, jak białe lwy czy pantery śnieżne. Świetna atrakcja dla rodzin z dziećmi.
+                <br><br>  <img src="../../static/images/miejsca/zoo.jpeg" alt="City 4">
+               
+            </div>
+        </div>
+      
+        
+    </div>
+   
+</article>
+
+</body>
+{% endblock %}

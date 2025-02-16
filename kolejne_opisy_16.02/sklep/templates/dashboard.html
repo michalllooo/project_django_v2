@@ -1,0 +1,144 @@
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/css/glowna.css">
+<script src="../../static/js/votes.js"></script>
+<body>
+    <header>
+        <div class="user-info">
+            {% if user.is_authenticated %}
+                <span>Welcome, {{ user.username }}!</span>
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form>
+            {% endif %}
+        </div>
+    </header>
+<div class="container">
+    <h1>Województwa Polski</h1><br>
+    <div class="wojewodztwa-list">
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'zach' %}">
+                <img src="{% static 'images/zachod.png' %}" alt="zachodnioporskie">
+                <p>Zachodnioporskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'pomo' %}">
+                <img src="{% static 'images/pomorskie.jpeg' %}" alt="pomorskie">
+                <p>Pomorskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'warm' %}">
+                <img src="{% static 'images/warm.jpeg' %}" alt="warminsko-mazurskie">
+                <p>Warminsko-Mazurskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'podl' %}">
+                <img src="{% static 'images/podl.jpeg' %}" alt="podlaskie">
+                <p>Podlaskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'mazo' %}">
+                <img src="{% static 'images/mazow.jpeg' %}" alt="mazowieckie">
+                <p>Mazowieckie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'kuja' %}">
+                <img src="{% static 'images/kujaw.jpeg' %}" alt="Kujawsko-Pomorskie">
+                <p>Kujawsko-Pomorskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'wiel' %}">
+                <img src="{% static 'images/wiel.jpeg' %}" alt="wielkopolskie">
+                <p>Wielkopolskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'lubu' %}">
+                <img src="{% static 'images/lubus.png' %}" alt="lubuskie">
+                <p>Lubuskie</p>
+            </a>
+        </div>
+
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'doln' %}">
+                <img src="{% static 'images/dolnoslaskie.png' %}" alt="Dolnośląskie">
+                <p>Dolnośląskie</p>
+            </a>
+        </div>
+       
+      
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'opol' %}">
+                <img src="{% static 'images/opol.jpeg' %}" alt="opolskie">
+                <p>Opolskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'lodz' %}">
+                <img src="{% static 'images/lodz.jpeg' %}" alt="lodzie">
+                <p>Łódzkie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'swie' %}">
+                <img src="{% static 'images/swiet.jpeg' %}" alt="swietokrzyskie">
+                <p>Świętokrzyskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'lube' %}">
+                <img src="{% static 'images/lubel.jpeg' %}" alt="lubelskie">
+                <p>Lubelskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'podk' %}">
+                <img src="{% static 'images/podka.jpeg' %}" alt="podkarpackie">
+                <p>Podkarpackie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'malo' %}">
+                <img src="{% static 'images/malop.jpeg' %}" alt="malopolskie">
+                <p>Małopolskie</p>
+            </a>
+        </div>
+        <div class="wojewodztwo-item">
+            <a href="{% url 'region_view' 'slas' %}">
+                <img src="{% static 'images/slask.jpeg' %}" alt="slaskie">
+                <p>Śląskie</p>
+            </a>
+        </div>
+       
+      
+    </div>
+    <div class="voting-section">
+        <h2>Zagłosuj na najlepsze wojewodztwo ! (zastanow sie dobrze bo głosu nie można zmienić)</h2>
+        <button class="vote-button" data-city="Zach">Zachodniopomorskie (<span id="votes-zach">{{ votes.Zach|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Pomo">Pomorskie (<span id="votes-pomo">{{ votes.Pomo|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Warm">Warminsko-Mazurskie (<span id="votes-warm">{{ votes.Warm|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Podl">Podlaskie (<span id="votes-podl">{{ votes.Podl|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Mazo">Mazowieckie (<span id="votes-mazo">{{ votes.Maz|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Kuja">Kujawsko-Pomorskie (<span id="votes-kuja">{{ votes.Kuja|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Wiel">Wielkopolskie (<span id="votes-wiel">{{ votes.Wiel|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Lubu">Lubuskie (<span id="votes-lubu">{{ votes.Lubu|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Doln">Dolnośląskie (<span id="votes-doln">{{ votes.Doln|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Opol">Opolskie (<span id="votes-opol">{{ votes.Opol|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Lodz">Łódzkie (<span id="votes-lodz">{{ votes.Lodz|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Swie">Świętokrzyskie (<span id="votes-swie">{{ votes.Swie|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Lube">Lubelskie (<span id="votes-lube">{{ votes.Lube|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Podk">Podkarpackie (<span id="votes-podk">{{ votes.Podk|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Malo">Małopolskie (<span id="votes-malo">{{ votes.Malo|default:0 }}</span>)</button>
+        <button class="vote-button" data-city="Slas">Śląskie (<span id="votes-slas">{{ votes.Slas|default:0 }}</span>)</button>
+    </div>
+</div>
+</body>
+{% endblock %}
