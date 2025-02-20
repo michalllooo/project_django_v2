@@ -123,3 +123,74 @@ article {
 .vote-button span {
     font-weight: bold;
 }
+
+
+
+
+@media (max-width: 1200px) {
+    .blocks-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block {
+        width: 80%;
+    }
+
+    .city {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .city {
+        width: 90%;
+        height: auto;
+    }
+
+    .city img {
+        height: auto;
+    }
+
+    .voting-section {
+        padding: 10px;
+    }
+
+    .vote-button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-info span {
+        margin-bottom: 10px;
+    }
+
+    .blocks-container {
+        padding: 10px;
+    }
+
+    .city {
+        padding: 10px;
+    }
+
+    .voting-section h2 {
+        font-size: 20px;
+    }
+
+    .vote-button {
+        font-size: 14px;
+    }
+}
