@@ -146,12 +146,10 @@ article {
 @media (max-width: 768px) {
     .city {
         width: 90%;
-        height: auto;
+       
     }
 
-    .city img {
-        height: auto;
-    }
+    
 
     .voting-section {
         padding: 10px;
